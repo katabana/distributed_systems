@@ -1,6 +1,6 @@
 ## RabbitMQ
 
-Example application using RabbitMQ. 
+An example application using RabbitMQ. 
 
 There are three types of users:
 - Doctor (ordering examinations, receiving results)
@@ -9,11 +9,11 @@ There are three types of users:
 
 There are three types of examinations: hip, knee and elbow.
 
-Doctor sends order of examination, providing the type of examination and patient's name to any technician that can do the examination. Results are returned asynchronously
+The doctor sends order of examination, providing the type of examination and patient's name to any technician that can do the examination. Results are returned asynchronously.
 
-Each technician can do two types of examination and gets only orders of those types, sending response to the doctor that has ordered it. Only one technician does received order. 
+Each technician can do two types of examination and gets only orders of those types, sending response to the doctor that has ordered it. Only one technician processes the received order. 
 
-Administrator loggs all events (receiving copies of messages - orders and responses). He can send message to all users.
+The administrator loggs all events (receiving copies of messages - orders and responses). He can send messages to all users.
 
 * * *
 
@@ -24,15 +24,15 @@ Only for Python 2.
 ```linux
 python2 doctor.py
 ```
-When a new doctor is started you will be asked for his id.
-Then you can order new examination by providing the type of examination and next the patient's name.
+When a new doctor is started, you will be asked for his id.
+Then you can order new examination by providing the type of an examination and next the patient's name.
 
 **Start a new technician:**
 
 ```linux
 python2 technician.py
 ```
-When a new technician is started you will be asked for his two specialisations.
+When a new technician is started, you will be asked for his two specialisations.
 
 **Start the admin:**
 ```linux
