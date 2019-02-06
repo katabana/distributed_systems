@@ -2,13 +2,13 @@
 
 ### Online bookstore model
 
-Our task is to provide 3 types of operations for users:
+Our task is to provide the following types of operations for users:
 
 - searching for a book (which returns its price or information that it is not available)
 - ordering a book (which returns a confirmation of the order)
 - streaming a book's text (with a speed of one line/sentence per second)
 
-Console application was created based on Akka platform. Server is a single machine that has multiple resources (but not infinite). It was designed to be able to serve in parallel as many clients as possible (using one server) and to minimalise times of the server's responses. Moreover, the aim was also to minimalise the quantity of data sent via network. 
+The console application was created based on Akka platform. The server is a single machine that has multiple resources (but not infinite). It was designed to be able to serve in parallel as many clients as possible (using one server) and to minimalise the duration of the server's responses. Moreover, the aim was also to minimalise the quantity of data sent via network. 
 
 **Searching for a book**
 
